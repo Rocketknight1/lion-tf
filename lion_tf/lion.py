@@ -30,7 +30,7 @@ class Lion(optimizer.Optimizer):
     IndexedSlices object, typically because of `tf.gather` or an embedding
     lookup in the forward pass) does apply momentum to variable slices even if
     they were not used in the forward pass (meaning they have a gradient equal
-    to zero). Momentum decay (beta1) is also applied to the entire momentum
+    to zero). Momentum decay (beta2) is also applied to the entire momentum
     accumulator. This means that the sparse behavior is equivalent to the dense
     behavior (in contrast to some momentum implementations which ignore momentum
     unless a variable slice was actually used).
