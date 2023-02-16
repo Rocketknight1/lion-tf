@@ -7,6 +7,8 @@ def lerp(start, end, weight):
 
 
 def sparse_lerp(start, end, weight):
+    # Mathematically equivalent, but you can't subtract a dense Tensor from sparse
+    # IndexedSlices, so we have to flip it around.
     return start + weight * -(start - end)
 
 
