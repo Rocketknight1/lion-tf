@@ -14,3 +14,9 @@ from lion_tf import Lion
 
 model.compile(Lion(1e-5))
 ```
+
+## Tips
+
+Lion likes much lower learning rates than Adam - I'd suggest a factor of 10 lower as a good starting point. When
+fine-tuning pre-trained models, learning rates are already quite low, which means the optimal LR for Lion can be
+*very* low. I found 1e-5 or less worked well for fine-tuning BERT!
