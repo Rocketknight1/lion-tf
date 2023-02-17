@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='lion-tf',
     version='0.1',
-    packages=[''],
+    packages=['lion_tf'],
     url='',
     license='',
     author='matt',
